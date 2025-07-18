@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body>
+    <header class="header">
+
+        <div class="logo_header">
+            <h1>Coffee</h1>
+        </div>
+
+
+        <nav class="menu_desktop">
+            <ul id="ul_desktop">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#delivery" class="delivery_desktop_btn">Delivery</a></li>
+            </ul>
+        </nav>
+
+        <nav class="menu_mobile">
+            <ul class="ul_mobile">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a class="delivery_a" href="#delivery">Delivery</a></li>
+            </ul>
+        </nav>
+
+        <button id="mobile_btn">
+            <span class="material-symbols-outlined" id="nav_open">menu</span>
+        </button>
+    </header>
+
+    
+
+    <main>
+        <section id="inicio">
+            <h2>Cafés e Chás para despertar seu dia com energia e sabor!</h2>
+            <address class="adress_local">Asa Sul e Asa Norte.</address>
+        </section>
+
+        <section id="cardapio">
+                <div class="coffee" id="coffee_1"> </div>
+                <div class="coffee" id="coffee_2"> </div>
+                <div class="coffee" id="coffee_3"> </div>
+                <div class="coffee" id="coffee_4"> </div>
+                <div class="tea" id="tea_1">  </div>
+                <div class="tea" id="tea_2">  </div>
+                <div class="tea" id="tea_3">  </div>
+                <div class="tea" id="tea_4">  </div>
+        </section>
+
+        <section id="delivery">
+            <button class="delivery_btn">Pedir entrega</button>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
