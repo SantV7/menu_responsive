@@ -121,13 +121,13 @@ main > #delivery {
 main > #delivery > .delivery_btn {
     cursor: pointer;
     border: none;
-    height: 60px;
-    width: 190px;
-    font-size: 25px;
+    height: 80px;
+    width: 240px;
+    font-size: 23.5px;
     font-weight: 600;
     border-radius: 10px;
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.233);
-    background-color: rgb(177, 177, 78);
+    background-color: rgb(180, 180, 72);
     transition: ease .3s;
     padding: 15px;
 }
