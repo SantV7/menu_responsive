@@ -70,19 +70,20 @@ body {
 main {
     display: grid;
     grid-template-columns: 1fr 3fr 3fr 1fr;
-    grid-template-rows: 3fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: auto auto auto; /* Ajustado para linhas flexíveis */
     margin: auto;
     margin-bottom: 20px;
     box-shadow: 1px 2px 9px rgba(0, 0, 0, 0.227);
     background-image: linear-gradient(to bottom , rgb(30, 30, 34) , rgb(29, 26, 26));
     border-radius: 10px;
-    height: 885px;
+    height: auto; /* Altura automática */
     width: 88vw;
+    padding-bottom: 20px; /* Espaço extra */
 }
 main > #inicio {
     grid-area: 1 / 1 / 2 / 5;
     text-align: start;
-    padding: 10px;
+    padding: 20px; /* Aumentado para melhor espaçamento */
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.385);
     color: white;
 }
@@ -99,24 +100,26 @@ main > #inicio > .adress_local {
 main > #cardapio {
     text-align: center;
     display: grid;
-    gap: 11px;
-    height: 585px;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(8, 100px);
-    grid-area: 2 / 1 / 8/ 5;
-    margin-bottom: 13px;
+    gap: 15px; /* Aumentado para melhor espaçamento */
+    height: auto; /* Altura automática */
+    min-height: 760px; /* Altura mínima baseada em 4x190px */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 190px);
+    grid-area: 2 / 1 / 3 / 5;
+    margin: 15px 0; /* Margem ajustada */
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.117);
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 15px; /* Aumentado para melhor espaçamento */
     background-color: rgb(37, 37, 37);
 }
 main > #delivery {
-    height: 200px;
+    height: auto; /* Altura automática */
+    min-height: 200px; /* Mantém altura mínima */
     display: grid;
     margin: auto;
-    margin-bottom: 5px;
-    grid-area: 8/ 1/ 10/ 5;
+    margin-top: 20px; /* Espaço extra acima */
+    grid-area: 3 / 1 / 4 / 5;
     text-align: center;
+    align-content: center; /* Centraliza verticalmente */
 }
 main > #delivery > .delivery_btn {
     cursor: pointer;
@@ -130,6 +133,7 @@ main > #delivery > .delivery_btn {
     background-color: rgb(180, 180, 72);
     transition: ease .3s;
     padding: 15px;
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 main > #delivery > .delivery_btn:hover {
     background-color: yellow;
@@ -161,38 +165,35 @@ main > #delivery > .delivery_btn:hover {
 
 .coffee, .tea {
     display: flex;
-    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.235);
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.235);
     border-radius: 5px;
-    flex-shrink: 0;
-    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.05); /* Fundo sutil para visualização */
 }
 
 #coffee_1 {
-    grid-area: 2 / 1 / 3 / 2  ;
+    grid-area: 1 / 1 / 2 / 2;
 }
 #coffee_2 {
-    grid-area: 2 / 2 / 3 / 3 ;
+    grid-area: 1 / 2 / 2 / 3;
 }
-#coffee_3  {
-    grid-area: 3 / 1 / 4 / 2 ;
+#coffee_3 {
+    grid-area: 2 / 1 / 3 / 2;
 }
-#coffee_4  {
-    grid-area: 3 / 2 / 3 / 3 ;
+#coffee_4 {
+    grid-area: 2 / 2 / 3 / 3;
 }
-
 #tea_1 {
-    grid-area: 4 / 1 / 5 / 2;
+    grid-area: 3 / 1 / 4 / 2;
 }
 #tea_2 {
-    grid-area: 4 / 2 / 5 / 3 ;
+    grid-area: 3 / 2 / 4 / 3;
 }
 #tea_3 {
-    grid-area: 5 / 1 / 6 / 2 ; 
+    grid-area: 4 / 1 / 5 / 2;
 }
 #tea_4 {
-    grid-area: 5 / 2 / 6 / 3 ;
+    grid-area: 4 / 2 / 5 / 3;
 }
-
 
 @media screen and (min-width:940px) {
     .header {
@@ -200,35 +201,30 @@ main > #delivery > .delivery_btn:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
- 
     }
     .logo_header {
         font-size: 17.3px;
     }
-
     .menu_desktop {
         display: block;
         margin-left: auto;
         margin-right: 20px;
     }
-
     #nav_open {
         display: none;
     }
     main {
         max-width: 78vw;
     }
-     main > #inicio > h2 {
+    main > #inicio > h2 {
         margin-left: 50px;
         margin-top: 5px;
         font-size: 27px;
     }
-
     .menu_mobile {
         display: none;
     }
-
-     #ul_desktop {
+    #ul_desktop {
         gap: 40px; 
     }
     #ul_desktop > li > {
